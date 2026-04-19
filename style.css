@@ -1263,9 +1263,7 @@ nav.scrolled {
 /* Replace aggressive scaling */
 .btn-primary:hover,
 .btn-hire:hover,
-.social-link:hover {
-  transform: translateY(-2px);
-}
+
 
 /* Subtle card hover */
 .proj-card:hover,
