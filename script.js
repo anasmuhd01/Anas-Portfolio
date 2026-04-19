@@ -20,7 +20,7 @@
 ───────────────────────────────────── */
 const CONFIG = {
   /* Typing animation — your name on the hero */
-  name: "Your Name",          // ← change this
+  name: " Anas ",          // ← change this
 
   /* How fast the typing goes (milliseconds per character) */
   typingSpeed: 110,
@@ -34,14 +34,14 @@ const CONFIG = {
    2. CUSTOM CURSOR
 ───────────────────────────────────── */
 const cursor = document.getElementById('cursor');
-const ring   = document.getElementById('cursor-ring');
+const ring = document.getElementById('cursor-ring');
 let mx = 0, my = 0, rx = 0, ry = 0;
 
 document.addEventListener('mousemove', e => {
   mx = e.clientX;
   my = e.clientY;
   cursor.style.left = mx + 'px';
-  cursor.style.top  = my + 'px';
+  cursor.style.top = my + 'px';
 });
 
 /* Ring lags behind cursor for a smooth feel */
@@ -49,23 +49,23 @@ document.addEventListener('mousemove', e => {
   rx += (mx - rx) * 0.12;
   ry += (my - ry) * 0.12;
   ring.style.left = rx + 'px';
-  ring.style.top  = ry + 'px';
+  ring.style.top = ry + 'px';
   requestAnimationFrame(animateRing);
 })();
 
 /* Expand ring on hover over interactive elements */
 document.querySelectorAll('a, button, .proj-card, .stat-card, .skill-card').forEach(el => {
   el.addEventListener('mouseenter', () => {
-    cursor.style.width  = '6px';
+    cursor.style.width = '6px';
     cursor.style.height = '6px';
-    ring.style.width  = '52px';
+    ring.style.width = '52px';
     ring.style.height = '52px';
     ring.style.borderColor = 'rgba(0,229,255,0.6)';
   });
   el.addEventListener('mouseleave', () => {
-    cursor.style.width  = '10px';
+    cursor.style.width = '10px';
     cursor.style.height = '10px';
-    ring.style.width  = '36px';
+    ring.style.width = '36px';
     ring.style.height = '36px';
     ring.style.borderColor = 'rgba(0,229,255,0.4)';
   });
@@ -90,10 +90,10 @@ setTimeout(typeChar, CONFIG.typingDelay);
 /* ─────────────────────────────────────
    4. SCROLL SNAP + PAGE DETECTION
 ───────────────────────────────────── */
-const container   = document.getElementById('scroll-container');
-const pages       = document.querySelectorAll('.page');
-const dots        = document.querySelectorAll('.dot-item');
-let   currentPage = 0;
+const container = document.getElementById('scroll-container');
+const pages = document.querySelectorAll('.page');
+const dots = document.querySelectorAll('.dot-item');
+let currentPage = 0;
 
 /* IntersectionObserver fires when a page is 50% visible */
 const pageObserver = new IntersectionObserver(entries => {
@@ -140,26 +140,26 @@ function triggerReveal(page) {
 let lastScrollTop = 0;
 
 container.addEventListener('scroll', () => {
-  const st  = container.scrollTop;
+  const st = container.scrollTop;
   const dir = st > lastScrollTop ? 'down' : 'up';
   lastScrollTop = st;
 
   pages.forEach(page => {
-    const rect     = page.getBoundingClientRect();
-    const vh       = window.innerHeight;
+    const rect = page.getBoundingClientRect();
+    const vh = window.innerHeight;
 
     /* progress = 0 when fully visible, 1 when fully scrolled past */
     const progress = 1 - Math.max(0, Math.min(1, rect.bottom / vh));
 
     if (dir === 'down' && progress > 0 && progress < 0.8) {
-      const scale   = 1 - progress * 0.10;   /* shrinks to 90% */
+      const scale = 1 - progress * 0.10;   /* shrinks to 90% */
       const opacity = 1 - progress * 0.60;   /* fades to 40%   */
       page.style.transform = `scale(${scale})`;
-      page.style.opacity   = opacity;
+      page.style.opacity = opacity;
     } else {
       /* Reset when scrolling back up or fully gone */
       page.style.transform = '';
-      page.style.opacity   = '';
+      page.style.opacity = '';
     }
   });
 }, { passive: true });

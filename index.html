@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name — Full Stack Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Noise overlay -->
@@ -18,7 +22,7 @@
 
   <!-- ─── NAV ─── -->
   <nav id="main-nav">
-    <div class="nav-logo">YourName.dev</div> <!-- ← EDIT: your name/domain -->
+    <div class="nav-logo">Anas.dev</div> <!-- ← EDIT: your name/domain -->
     <ul class="nav-links">
       <li><a href="#hero"><span>01.</span>Home</a></li>
       <li><a href="#about"><span>02.</span>About</a></li>
@@ -59,8 +63,10 @@
           Full-Stack Developer &mdash; <b>Django · Python · React · PostgreSQL</b> <!-- ← EDIT -->
         </p>
         <div class="hero-btns">
-          <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
-          <button class="btn-ghost"   onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+          <button class="btn-primary"
+            onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+          <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get
+            In Touch</button>
         </div>
       </div>
 
@@ -74,14 +80,20 @@
         </div>
         <div class="code-body">
           <div><span class="ln">1</span><span class="cm"># Portfolio API</span></div>
-          <div><span class="ln">2</span><span class="kw">from </span><span class="cn">rest_framework</span><span class="kw"> import </span>views</div>
+          <div><span class="ln">2</span><span class="kw">from </span><span class="cn">rest_framework</span><span
+              class="kw"> import </span>views</div>
           <div><span class="ln">3</span>&nbsp;</div>
-          <div><span class="ln">4</span><span class="kw">class </span><span class="fn">DeveloperView</span>(views.APIView):</div>
-          <div><span class="ln">5</span>&nbsp;&nbsp;<span class="kw">def </span><span class="fn">get</span>(<span class="ky">self</span>, request):</div>
+          <div><span class="ln">4</span><span class="kw">class </span><span
+              class="fn">DeveloperView</span>(views.APIView):</div>
+          <div><span class="ln">5</span>&nbsp;&nbsp;<span class="kw">def </span><span class="fn">get</span>(<span
+              class="ky">self</span>, request):</div>
           <div><span class="ln">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> Response({</div>
-          <div><span class="ln">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"name"</span>: <span class="st">"Your Name"</span>,</div> <!-- ← EDIT -->
-          <div><span class="ln">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"stack"</span>: <span class="st">"Django+React"</span>,</div>
-          <div><span class="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"status"</span>: <span class="st">"available"</span><span class="code-cursor"></span></div>
+          <div><span class="ln">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"name"</span>: <span
+              class="st">"Your Name"</span>,</div> <!-- ← EDIT -->
+          <div><span class="ln">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"stack"</span>: <span
+              class="st">"Django+React"</span>,</div>
+          <div><span class="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"status"</span>: <span
+              class="st">"available"</span><span class="code-cursor"></span></div>
           <div><span class="ln">10</span>&nbsp;&nbsp;&nbsp;&nbsp;})</div>
         </div>
       </div>
@@ -153,48 +165,73 @@
         <div class="skills-grid">
           <!-- ← EDIT: change skill-name, pct percentage, data-width, and skill-cat -->
           <div class="skill-card reveal reveal-delay-1">
-            <div class="skill-header"><span class="skill-name">Django / DRF</span><span class="skill-pct">92%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92"></div></div>
+            <div class="skill-header"><span class="skill-name">Django / DRF</span><span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="92"></div>
+            </div>
             <div class="skill-cat">Backend Framework</div>
           </div>
           <div class="skill-card reveal reveal-delay-2">
             <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">90%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="90"></div>
+            </div>
             <div class="skill-cat">Core Language</div>
           </div>
           <div class="skill-card reveal reveal-delay-3">
             <div class="skill-header"><span class="skill-name">PostgreSQL</span><span class="skill-pct">82%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82"></div></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="82"></div>
+            </div>
             <div class="skill-cat">Database</div>
           </div>
           <div class="skill-card reveal reveal-delay-2">
-            <div class="skill-header"><span class="skill-name">React / JavaScript</span><span class="skill-pct">78%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div>
+            <div class="skill-header"><span class="skill-name">React / JavaScript</span><span
+                class="skill-pct">78%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="78"></div>
+            </div>
             <div class="skill-cat">Frontend</div>
           </div>
           <div class="skill-card reveal reveal-delay-3">
-            <div class="skill-header"><span class="skill-name">REST API Design</span><span class="skill-pct">88%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div>
+            <div class="skill-header"><span class="skill-name">REST API Design</span><span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="88"></div>
+            </div>
             <div class="skill-cat">Architecture</div>
           </div>
           <div class="skill-card reveal reveal-delay-4">
-            <div class="skill-header"><span class="skill-name">Docker / CI-CD</span><span class="skill-pct">72%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="72"></div></div>
+            <div class="skill-header"><span class="skill-name">Docker / CI-CD</span><span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="72"></div>
+            </div>
             <div class="skill-cat">DevOps</div>
           </div>
           <div class="skill-card reveal reveal-delay-3">
-            <div class="skill-header"><span class="skill-name">Celery / Redis</span><span class="skill-pct">75%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
+            <div class="skill-header"><span class="skill-name">Celery / Redis</span><span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="75"></div>
+            </div>
             <div class="skill-cat">Task Queue</div>
           </div>
           <div class="skill-card reveal reveal-delay-4">
-            <div class="skill-header"><span class="skill-name">Git / GitHub</span><span class="skill-pct">85%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
+            <div class="skill-header"><span class="skill-name">Git / GitHub</span><span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="85"></div>
+            </div>
             <div class="skill-cat">Version Control</div>
           </div>
           <div class="skill-card reveal reveal-delay-5">
-            <div class="skill-header"><span class="skill-name">Linux / Nginx</span><span class="skill-pct">70%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="70"></div></div>
+            <div class="skill-header"><span class="skill-name">Linux / Nginx</span><span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="70"></div>
+            </div>
             <div class="skill-cat">Server / Deployment</div>
           </div>
         </div>
@@ -212,11 +249,13 @@
         <div class="projects-grid">
           <!-- ← EDIT: proj-type, proj-title, proj-desc, tech pills, and href on the card -->
 
-          <div class="proj-card reveal reveal-delay-1" onclick="window.open('https://github.com/yourusername/project1','_blank')">
+          <div class="proj-card reveal reveal-delay-1"
+            onclick="window.open('https://github.com/yourusername/project1','_blank')">
             <div class="proj-arrow">↗</div>
             <div class="proj-type">Full-Stack · Django + React</div>
             <div class="proj-title">Project Title Here</div>
-            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it
+              solves.</div>
             <div class="proj-stack">
               <span class="tech">Django</span>
               <span class="tech">React</span>
@@ -225,11 +264,13 @@
             </div>
           </div>
 
-          <div class="proj-card reveal reveal-delay-2" onclick="window.open('https://github.com/yourusername/project2','_blank')">
+          <div class="proj-card reveal reveal-delay-2"
+            onclick="window.open('https://github.com/yourusername/project2','_blank')">
             <div class="proj-arrow">↗</div>
             <div class="proj-type">Backend API · DRF</div>
             <div class="proj-title">Project Title Here</div>
-            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it
+              solves.</div>
             <div class="proj-stack">
               <span class="tech">DRF</span>
               <span class="tech">Celery</span>
@@ -238,11 +279,13 @@
             </div>
           </div>
 
-          <div class="proj-card reveal reveal-delay-3" onclick="window.open('https://github.com/yourusername/project3','_blank')">
+          <div class="proj-card reveal reveal-delay-3"
+            onclick="window.open('https://github.com/yourusername/project3','_blank')">
             <div class="proj-arrow">↗</div>
             <div class="proj-type">Web App · Python</div>
             <div class="proj-title">Project Title Here</div>
-            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it
+              solves.</div>
             <div class="proj-stack">
               <span class="tech">Python</span>
               <span class="tech">Django</span>
@@ -250,11 +293,13 @@
             </div>
           </div>
 
-          <div class="proj-card reveal reveal-delay-4" onclick="window.open('https://github.com/yourusername/project4','_blank')">
+          <div class="proj-card reveal reveal-delay-4"
+            onclick="window.open('https://github.com/yourusername/project4','_blank')">
             <div class="proj-arrow">↗</div>
             <div class="proj-type">Open Source</div>
             <div class="proj-title">Project Title Here</div>
-            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it
+              solves.</div>
             <div class="proj-stack">
               <span class="tech">Python</span>
               <span class="tech">Docker</span>
@@ -297,4 +342,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
