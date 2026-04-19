@@ -1,3 +1,9 @@
+if ('ontouchstart' in window) {
+  document.getElementById('cursor').style.display = 'none';
+  document.getElementById('cursor-ring').style.display = 'none';
+}
+
+
 /* ════════════════════════════════════════
    script.js  —  Portfolio JavaScript
    ════════════════════════════════════════
@@ -195,5 +201,24 @@ document.querySelectorAll('.nav-links a').forEach(a => {
     e.preventDefault();
     const id = a.getAttribute('href').replace('#', '');
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+/* ─────────────────────────────
+   MOBILE MENU TOGGLE
+───────────────────────────── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+});
+
+/* Close menu on link click */
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
   });
 });

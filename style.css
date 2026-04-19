@@ -488,7 +488,7 @@ nav.scrolled {
   background: var(--cyan);
   vertical-align: middle;
   animation: blink 0.8s step-end infinite;
-} 
+}
 
 /* Scroll hint */
 .scroll-hint {
@@ -993,4 +993,296 @@ nav.scrolled {
   opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-size: 200px;
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE FIXES
+   ════════════════════════════════════════ */
+
+/* ─── Tablets (≤1024px) ─── */
+@media (max-width: 1024px) {
+
+  nav {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  #hero {
+    padding: 0 40px;
+  }
+
+  .hero-name {
+    font-size: 52px;
+  }
+
+  .code-box {
+    right: 20px;
+    width: 280px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ─── Mobile (≤768px) ─── */
+@media (max-width: 768px) {
+
+  body {
+    cursor: auto;
+  }
+
+  #cursor,
+  #cursor-ring {
+    display: none;
+  }
+
+  nav {
+    padding: 14px 16px;
+  }
+
+  .nav-links {
+    display: none;
+    /* you can replace with hamburger later */
+  }
+
+  .btn-hire {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+
+  /* HERO */
+  #hero {
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  .hero-name {
+    font-size: 38px;
+  }
+
+  .typing-cursor {
+    height: 40px;
+  }
+
+  .hero-role {
+    font-size: 12px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .code-box {
+    display: none;
+    /* hide on mobile */
+  }
+
+  /* ABOUT */
+  #about {
+    padding: 80px 20px 40px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* SKILLS */
+  #skills {
+    padding: 80px 20px 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECTS */
+  #projects {
+    padding: 80px 20px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 80px 20px 40px;
+  }
+
+  .contact-heading {
+    font-size: 36px;
+  }
+
+  .contact-email {
+    font-size: 16px;
+  }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  /* PAGE DOTS */
+  .page-dots {
+    display: none;
+  }
+}
+
+
+/* ─── Small Mobile (≤480px) ─── */
+@media (max-width: 480px) {
+
+  .hero-name {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .contact-heading {
+    font-size: 28px;
+  }
+
+}
+
+/* ═════════════════════════════
+   PREMIUM NAV + MOBILE MENU
+   ═════════════════════════════ */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-5px);
+}
+
+/* Mobile menu panel */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 250;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  font-family: var(--font-head);
+  font-size: 28px;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: var(--cyan);
+  transform: scale(1.2);
+  transition: transform 500ms;
+}
+
+
+/* ─── MOBILE NAV FIX ─── */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .btn-hire {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+/* ═════════════════════════════
+   SMOOTH INTERACTIONS (PREMIUM)
+   ═════════════════════════════ */
+
+/* Replace aggressive scaling */
+.btn-primary:hover,
+.btn-hire:hover,
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Subtle card hover */
+.proj-card:hover,
+.skill-card:hover,
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Smooth transitions globally */
+button,
+a,
+.proj-card,
+.skill-card,
+.stat-card {
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ═════════════════════════════
+   FLUID TYPOGRAPHY (APPLE-LIKE)
+   ═════════════════════════════ */
+
+.hero-name {
+  font-size: clamp(32px, 6vw, 72px);
+}
+
+.section-title {
+  font-size: clamp(26px, 4vw, 44px);
+}
+
+.contact-heading {
+  font-size: clamp(28px, 5vw, 52px);
 }
