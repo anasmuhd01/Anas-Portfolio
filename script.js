@@ -222,3 +222,11 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     mobileMenu.classList.remove('active');
   });
 });
+
+/* close button */
+const closeBtn = document.getElementById('close-btn');
+
+closeBtn.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('active');
+});

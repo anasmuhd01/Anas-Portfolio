@@ -1192,6 +1192,19 @@ nav.scrolled {
   transform: rotate(-45deg) translateY(-5px);
 }
 
+/* Transform into X */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Mobile menu panel */
 .mobile-menu {
   position: fixed;
@@ -1285,4 +1298,44 @@ a,
 
 .contact-heading {
   font-size: clamp(28px, 5vw, 52px);
+}
+
+/* mobile menu open close animation */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(16px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* close button style */
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 28px;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+  color: var(--cyan);
 }
