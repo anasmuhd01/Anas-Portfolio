@@ -92,6 +92,7 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -157,19 +158,25 @@ nav.scrolled {
   display: flex;
   gap: 32px;
   list-style: none;
+
+
 }
 
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s;
   letter-spacing: 0.3px;
+
 }
 
 .nav-links a:hover {
+  display: inline-block;
   color: var(--cyan);
+  transform: scale(1.2);
+  transition: transform 500ms;
 }
 
 .nav-links a span {
@@ -193,6 +200,8 @@ nav.scrolled {
 .btn-hire:hover {
   background: var(--cyan);
   color: #000;
+  transform: scale(1.2);
+  transition: transform 500ms;
 }
 
 
@@ -329,8 +338,10 @@ nav.scrolled {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
+  transform: scale(1.2);
+  transition: transform 500ms;
   box-shadow: 0 8px 24px rgba(0, 229, 255, 0.25);
+
 }
 
 .btn-ghost {
@@ -347,6 +358,9 @@ nav.scrolled {
 
 .btn-ghost:hover {
   border-color: var(--muted);
+  transform: scale(1.2);
+  transition: transform 500ms;
+  margin-left: 5px;
 }
 
 /* Floating Code Box */
@@ -466,6 +480,7 @@ nav.scrolled {
   color: #9cdcfe;
 }
 
+/* for || line indication use with <span> after available*/
 .code-cursor {
   display: inline-block;
   width: 2px;
@@ -473,7 +488,7 @@ nav.scrolled {
   background: var(--cyan);
   vertical-align: middle;
   animation: blink 0.8s step-end infinite;
-}
+} 
 
 /* Scroll hint */
 .scroll-hint {
