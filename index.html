@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="main-nav">
+    <div class="nav-logo">YourName.dev</div> <!-- ← EDIT: your name/domain -->
+    <ul class="nav-links">
+      <li><a href="#hero"><span>01.</span>Home</a></li>
+      <li><a href="#about"><span>02.</span>About</a></li>
+      <li><a href="#skills"><span>03.</span>Skills</a></li>
+      <li><a href="#projects"><span>04.</span>Work</a></li>
+      <li><a href="#contact"><span>05.</span>Contact</a></li>
+    </ul>
+    <button class="btn-hire">Hire me ↗</button>
+  </nav>
+
+  <!-- Page Progress Dots -->
+  <div class="page-dots">
+    <div class="dot-item active" data-page="0"></div>
+    <div class="dot-item" data-page="1"></div>
+    <div class="dot-item" data-page="2"></div>
+    <div class="dot-item" data-page="3"></div>
+    <div class="dot-item" data-page="4"></div>
+  </div>
+
+  <!-- ─── SCROLL CONTAINER ─── -->
+  <div class="scroll-container" id="scroll-container">
+
+    <!-- ══════════════════════════
+         PAGE 1 · HERO
+    ══════════════════════════ -->
+    <section class="page" id="hero" data-page="0">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-orb"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">Available for work &nbsp;·&nbsp; Django / Python / React</div> <!-- ← EDIT -->
+        <h1 class="hero-name">
+          Hi, I'm<br>
+          <span class="highlight" id="typed-name"></span>
+          <span class="typing-cursor"></span>
+        </h1>
+        <p class="hero-role">
+          Full-Stack Developer &mdash; <b>Django · Python · React · PostgreSQL</b> <!-- ← EDIT -->
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+          <button class="btn-ghost"   onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+        </div>
+      </div>
+
+      <!-- Floating Code Box -->
+      <div class="code-box">
+        <div class="code-box-header">
+          <div class="dot r"></div>
+          <div class="dot y"></div>
+          <div class="dot g"></div>
+          <div class="code-file">views.py</div>
+        </div>
+        <div class="code-body">
+          <div><span class="ln">1</span><span class="cm"># Portfolio API</span></div>
+          <div><span class="ln">2</span><span class="kw">from </span><span class="cn">rest_framework</span><span class="kw"> import </span>views</div>
+          <div><span class="ln">3</span>&nbsp;</div>
+          <div><span class="ln">4</span><span class="kw">class </span><span class="fn">DeveloperView</span>(views.APIView):</div>
+          <div><span class="ln">5</span>&nbsp;&nbsp;<span class="kw">def </span><span class="fn">get</span>(<span class="ky">self</span>, request):</div>
+          <div><span class="ln">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> Response({</div>
+          <div><span class="ln">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"name"</span>: <span class="st">"Your Name"</span>,</div> <!-- ← EDIT -->
+          <div><span class="ln">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"stack"</span>: <span class="st">"Django+React"</span>,</div>
+          <div><span class="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky">"status"</span>: <span class="st">"available"</span><span class="code-cursor"></span></div>
+          <div><span class="ln">10</span>&nbsp;&nbsp;&nbsp;&nbsp;})</div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>SCROLL</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         PAGE 2 · ABOUT
+    ══════════════════════════ -->
+    <section class="page" id="about" data-page="1">
+      <div class="page-inner">
+        <div class="section-label reveal">About Me</div>
+        <h2 class="section-title reveal reveal-delay-1">The person<br>behind the code.</h2>
+
+        <div class="about-layout">
+          <div class="about-text reveal reveal-delay-2">
+            <!-- ← EDIT: your bio paragraphs -->
+            <p>
+              I'm a <b>full-stack developer</b> with a passion for building clean, scalable, and
+              meaningful web applications. My core stack revolves around <b>Django</b> and <b>Python</b>
+              on the backend, paired with modern frontend tools.
+            </p>
+            <p>
+              I care deeply about <b>clean architecture</b>, <b>RESTful API design</b>, and writing
+              code that is readable, maintainable, and testable. I've shipped products across
+              e-commerce, SaaS platforms, and internal tooling.
+            </p>
+            <p>
+              When I'm not building, I'm learning. Currently exploring
+              <b>async Django, containerization</b>, and cloud-native deployments.
+            </p>
+          </div>
+
+          <div class="about-stats reveal reveal-delay-3">
+            <!-- ← EDIT: replace X with your real numbers -->
+            <div class="stat-card">
+              <div class="stat-num">X+</div>
+              <div class="stat-lbl">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">XX</div>
+              <div class="stat-lbl">Projects Shipped</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">XX</div>
+              <div class="stat-lbl">Happy Clients</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">X</div>
+              <div class="stat-lbl">Open Source</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         PAGE 3 · SKILLS
+    ══════════════════════════ -->
+    <section class="page" id="skills" data-page="2">
+      <div class="page-inner">
+        <div class="section-label reveal">Tech Stack</div>
+        <h2 class="section-title reveal reveal-delay-1">Tools I work with.</h2>
+
+        <div class="skills-grid">
+          <!-- ← EDIT: change skill-name, pct percentage, data-width, and skill-cat -->
+          <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-header"><span class="skill-name">Django / DRF</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92"></div></div>
+            <div class="skill-cat">Backend Framework</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+            <div class="skill-cat">Core Language</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
+            <div class="skill-header"><span class="skill-name">PostgreSQL</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82"></div></div>
+            <div class="skill-cat">Database</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-header"><span class="skill-name">React / JavaScript</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div>
+            <div class="skill-cat">Frontend</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
+            <div class="skill-header"><span class="skill-name">REST API Design</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div>
+            <div class="skill-cat">Architecture</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-4">
+            <div class="skill-header"><span class="skill-name">Docker / CI-CD</span><span class="skill-pct">72%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="72"></div></div>
+            <div class="skill-cat">DevOps</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
+            <div class="skill-header"><span class="skill-name">Celery / Redis</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
+            <div class="skill-cat">Task Queue</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-4">
+            <div class="skill-header"><span class="skill-name">Git / GitHub</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
+            <div class="skill-cat">Version Control</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-5">
+            <div class="skill-header"><span class="skill-name">Linux / Nginx</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="70"></div></div>
+            <div class="skill-cat">Server / Deployment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         PAGE 4 · PROJECTS
+    ══════════════════════════ -->
+    <section class="page" id="projects" data-page="3">
+      <div class="page-inner">
+        <div class="section-label reveal">Featured Work</div>
+        <h2 class="section-title reveal reveal-delay-1">Things I've built.</h2>
+
+        <div class="projects-grid">
+          <!-- ← EDIT: proj-type, proj-title, proj-desc, tech pills, and href on the card -->
+
+          <div class="proj-card reveal reveal-delay-1" onclick="window.open('https://github.com/yourusername/project1','_blank')">
+            <div class="proj-arrow">↗</div>
+            <div class="proj-type">Full-Stack · Django + React</div>
+            <div class="proj-title">Project Title Here</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-stack">
+              <span class="tech">Django</span>
+              <span class="tech">React</span>
+              <span class="tech">PostgreSQL</span>
+              <span class="tech">Docker</span>
+            </div>
+          </div>
+
+          <div class="proj-card reveal reveal-delay-2" onclick="window.open('https://github.com/yourusername/project2','_blank')">
+            <div class="proj-arrow">↗</div>
+            <div class="proj-type">Backend API · DRF</div>
+            <div class="proj-title">Project Title Here</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-stack">
+              <span class="tech">DRF</span>
+              <span class="tech">Celery</span>
+              <span class="tech">Redis</span>
+              <span class="tech">AWS</span>
+            </div>
+          </div>
+
+          <div class="proj-card reveal reveal-delay-3" onclick="window.open('https://github.com/yourusername/project3','_blank')">
+            <div class="proj-arrow">↗</div>
+            <div class="proj-type">Web App · Python</div>
+            <div class="proj-title">Project Title Here</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-stack">
+              <span class="tech">Python</span>
+              <span class="tech">Django</span>
+              <span class="tech">HTMX</span>
+            </div>
+          </div>
+
+          <div class="proj-card reveal reveal-delay-4" onclick="window.open('https://github.com/yourusername/project4','_blank')">
+            <div class="proj-arrow">↗</div>
+            <div class="proj-type">Open Source</div>
+            <div class="proj-title">Project Title Here</div>
+            <div class="proj-desc">Replace with a 1–2 sentence description of what this project does and the problem it solves.</div>
+            <div class="proj-stack">
+              <span class="tech">Python</span>
+              <span class="tech">Docker</span>
+              <span class="tech">GitHub Actions</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         PAGE 5 · CONTACT
+    ══════════════════════════ -->
+    <section class="page" id="contact" data-page="4">
+      <div class="contact-inner">
+        <span class="contact-tag reveal">05 · Get In Touch</span>
+        <h2 class="contact-heading reveal reveal-delay-1">
+          Let's build<br><span>something</span><br>together.
+        </h2>
+        <p class="contact-sub reveal reveal-delay-2">
+          Open to full-time roles, freelance projects, and interesting collaborations.<br>
+          I reply within 24 hours.
+        </p>
+        <!-- ← EDIT: your real email -->
+        <a class="contact-email reveal reveal-delay-3" href="mailto:yourname@email.com">yourname@email.com</a>
+        <div class="social-links reveal reveal-delay-4">
+          <!-- ← EDIT: replace # with your real profile URLs -->
+          <a class="social-link" href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a class="social-link" href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+          <a class="social-link" href="resume.pdf" target="_blank">Resume PDF</a>
+          <a class="social-link" href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        </div>
+      </div>
+      <!-- ← EDIT: your name and year -->
+      <div class="footer-note">Built with ♥ · Your Name © 2026</div>
+    </section>
+
+  </div><!-- end scroll-container -->
+
+  <script src="script.js"></script>
+</body>
+</html>
