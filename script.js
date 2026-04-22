@@ -230,3 +230,5 @@ closeBtn.addEventListener('click', () => {
   hamburger.classList.remove('active');
   mobileMenu.classList.remove('active');
 });
+
+/* -- popup -- */
